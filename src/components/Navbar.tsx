@@ -26,7 +26,7 @@ const Navbar = () => {
           </span>
         </button>
 
-        <button className="md:hidden text-primary" onClick={() => setOpen(!open)}>
+        <button className="md:hidden text-primary-foreground" onClick={() => setOpen(!open)}>
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
             <li key={l.target}>
               <button
                 onClick={() => scrollTo(l.target)}
-                className="font-body font-medium text-foreground hover:text-primary transition-colors"
+                className="font-body font-medium text-primary-foreground/80 hover:text-accent transition-colors"
               >
                 {l.label}
               </button>
@@ -45,12 +45,12 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <ul className="md:hidden bg-background shadow-md px-6 pb-4 flex flex-col gap-4">
+        <ul className="md:hidden bg-primary shadow-md px-6 pb-4 flex flex-col gap-4">
           {navLinks.map((l) => (
             <li key={l.target}>
               <button
                 onClick={() => { scrollTo(l.target); setOpen(false); }}
-                className="font-body font-medium text-foreground hover:text-primary transition-colors"
+                className="font-body font-medium text-primary-foreground/80 hover:text-accent transition-colors"
               >
                 {l.label}
               </button>
