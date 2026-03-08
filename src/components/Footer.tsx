@@ -7,7 +7,7 @@ const Footer = () => (
     <div className="section-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
       <div>
         <h4 className="font-display text-accent font-semibold mb-3">About Clauseworks</h4>
-        <p className="text-sm opacity-80 font-body leading-relaxed">
+        <p className="text-sm opacity-80 font-body leading-relaxed text-justify">
           Clauseworks is a premier law firm based in New Delhi, providing comprehensive legal
           services in litigation, arbitration, and corporate law with a commitment to excellence
           and client satisfaction.
