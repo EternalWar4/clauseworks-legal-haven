@@ -17,16 +17,16 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-background sticky top-0 z-50 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+    <nav className="bg-primary sticky top-0 z-50 shadow-[0_2px_8px_rgba(0,0,0,0.15)]">
       <div className="section-container flex items-center justify-between py-3">
         <button onClick={() => scrollTo("home")} className="flex items-center gap-2">
-          <img src={logo} alt="Clauseworks Logo" className="h-10 w-10 object-contain mix-blend-multiply" />
-          <span className="font-display text-2xl font-bold text-primary">
+          <img src={logo} alt="Clauseworks Logo" className="h-10 w-10 object-contain brightness-[1.8] contrast-[1.1]" />
+          <span className="font-display text-2xl font-bold text-primary-foreground">
             Clause<span className="text-accent">works</span>
           </span>
         </button>
 
-        <button className="md:hidden text-primary" onClick={() => setOpen(!open)}>
+        <button className="md:hidden text-primary-foreground" onClick={() => setOpen(!open)}>
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
             <li key={l.target}>
               <button
                 onClick={() => scrollTo(l.target)}
-                className="font-body font-medium text-foreground hover:text-primary transition-colors"
+                className="font-body font-medium text-primary-foreground/80 hover:text-accent transition-colors"
               >
                 {l.label}
               </button>
@@ -45,12 +45,12 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <ul className="md:hidden bg-background shadow-md px-6 pb-4 flex flex-col gap-4">
+        <ul className="md:hidden bg-primary shadow-md px-6 pb-4 flex flex-col gap-4">
           {navLinks.map((l) => (
             <li key={l.target}>
               <button
                 onClick={() => { scrollTo(l.target); setOpen(false); }}
-                className="font-body font-medium text-foreground hover:text-primary transition-colors"
+                className="font-body font-medium text-primary-foreground/80 hover:text-accent transition-colors"
               >
                 {l.label}
               </button>
