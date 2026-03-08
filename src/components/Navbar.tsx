@@ -20,9 +20,9 @@ const Navbar = () => {
     <nav className="bg-background sticky top-0 z-50 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
       <div className="section-container flex items-center justify-between py-3">
         <button onClick={() => scrollTo("home")} className="flex items-center gap-2">
-          <img src={clauseworksIcon} alt="Clauseworks logo" className="h-9 w-9" />
-          <span className="font-display text-2xl font-bold text-primary">
-            Clause<span className="text-accent">works</span>
+          <img src={clauseworksIcon} alt="Clauseworks logo" className="h-12 w-12" />
+          <span className="font-display text-3xl font-bold text-primary">
+            Clause<span className="text-accent">Works</span>
           </span>
         </button>
 
