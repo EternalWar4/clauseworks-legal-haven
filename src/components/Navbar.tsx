@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/clauseworks-logo-transparent.png";
 
 const navLinks = [
   { label: "Home", target: "home" },
