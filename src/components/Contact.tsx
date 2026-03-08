@@ -19,7 +19,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <h3 className="font-display text-3xl font-bold mb-6">Get in Touch</h3>
-            <p className="opacity-90 mb-8 font-body text-lg">
+            <p className="opacity-90 mb-8 font-body text-lg text-justify">
               Have a legal matter you'd like to discuss? Our team is ready to assist you with expert
               legal guidance and representation.
             </p>

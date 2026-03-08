@@ -46,7 +46,7 @@ const PracticeAreas = () => (
           >
             <a.icon className="w-12 h-12 text-accent mb-4" strokeWidth={1.5} />
             <h3 className="font-display text-xl font-semibold text-primary mb-3">{a.title}</h3>
-            <p className="text-muted-foreground leading-relaxed font-body">{a.desc}</p>
+            <p className="text-muted-foreground leading-relaxed font-body text-justify">{a.desc}</p>
           </motion.div>
         ))}
       </div>
