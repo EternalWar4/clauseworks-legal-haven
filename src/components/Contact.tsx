@@ -25,7 +25,7 @@ const Contact = () => {
             </p>
             <div className="space-y-5">
               {[
-                { icon: MapPin, label: "Address", value: "House no. 24, Block 19, Trilokpuri,\nNew Delhi, Delhi, India 110091" },
+                { icon: MapPin, label: "Address", value: "New Delhi, India" },
                 { icon: Phone, label: "Phone", value: "+91 9354129891" },
                 { icon: Mail, label: "Email", value: "nikhilgoeloffice@gmail.com" },
                 { icon: Clock, label: "Office Hours", value: "Mon–Fri: 9:30 AM – 6:00 PM\nSat: 10:00 AM – 2:00 PM" },
