@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/clauseworks-logo.png";
 
 const navLinks = [
   { label: "Home", target: "home" },
@@ -20,7 +19,6 @@ const Navbar = () => {
     <nav className="bg-background sticky top-0 z-50 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
       <div className="section-container flex items-center justify-between py-3">
         <button onClick={() => scrollTo("home")} className="flex items-center gap-2">
-          <img src={logo} alt="Clauseworks Logo" className="h-10 w-10 rounded" />
           <span className="font-display text-2xl font-bold text-primary">
             Clause<span className="text-accent">works</span>
           </span>
