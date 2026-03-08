@@ -46,7 +46,7 @@ const Contact = () => {
               Request a Consultation
             </h3>
             {submitted && (
-              <div className="bg-green-100 text-green-800 p-3 rounded mb-4 text-sm font-body">
+              <div className="bg-secondary text-secondary-foreground p-3 rounded mb-4 text-sm font-body border border-accent">
                 Thank you for your inquiry. We will get back to you shortly.
               </div>
             )}
