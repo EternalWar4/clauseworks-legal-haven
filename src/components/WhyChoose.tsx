@@ -28,7 +28,7 @@ const WhyChoose = () => (
               <f.icon className="w-8 h-8 text-primary-foreground" />
             </div>
             <h3 className="font-display text-lg font-semibold text-primary mb-3">{f.title}</h3>
-            <p className="text-muted-foreground font-body text-justify">{f.desc}</p>
+            <p className="text-muted-foreground font-body">{f.desc}</p>
           </motion.div>
         ))}
       </div>
