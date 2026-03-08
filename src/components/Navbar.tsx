@@ -19,8 +19,7 @@ const Navbar = () => {
   return (
     <nav className="bg-background sticky top-0 z-50 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
       <div className="section-container flex items-center justify-between py-3">
-        <button onClick={() => scrollTo("home")} className="flex items-center gap-2">
-          <img src={logo} alt="Clauseworks Logo" className="h-10 w-10 object-contain" />
+        <button onClick={() => scrollTo("home")}>
           <span className="font-display text-2xl font-bold text-primary">
             Clause<span className="text-accent">works</span>
           </span>
