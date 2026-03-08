@@ -17,11 +17,11 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-background sticky top-0 z-50 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+    <nav className="bg-primary sticky top-0 z-50 shadow-[0_2px_8px_rgba(0,0,0,0.15)]">
       <div className="section-container flex items-center justify-between py-3">
         <button onClick={() => scrollTo("home")} className="flex items-center gap-2">
-          <img src={logo} alt="Clauseworks Logo" className="h-10 w-10 object-contain mix-blend-multiply" />
-          <span className="font-display text-2xl font-bold text-primary">
+          <img src={logo} alt="Clauseworks Logo" className="h-10 w-10 object-contain brightness-[1.8] contrast-[1.1]" />
+          <span className="font-display text-2xl font-bold text-primary-foreground">
             Clause<span className="text-accent">works</span>
           </span>
         </button>
