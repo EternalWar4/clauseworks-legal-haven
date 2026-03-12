@@ -4,13 +4,35 @@ import { toast } from "sonner";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    toast.success("Thank you for your inquiry. We will get back to you shortly.");
-    (e.target as HTMLFormElement).reset();
-    setTimeout(() => setSubmitted(false), 5000);
+    setLoading(true);
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    formData.append("access_key", "325e12fd-9212-4397-9f1f-5c5144ccd532");
+    formData.append("subject", "New Consultation Request - ClauseWorks");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+        toast.success("Thank you for your inquiry. We will get back to you shortly.");
+        form.reset();
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch {
+      toast.error("Failed to submit. Please check your connection and try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
