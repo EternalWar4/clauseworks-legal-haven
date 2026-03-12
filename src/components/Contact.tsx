@@ -114,6 +114,7 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   required
                   rows={4}
                   placeholder="Please briefly describe your legal matter"
@@ -122,9 +123,10 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="w-full py-3 bg-primary hover:bg-primary-dark text-primary-foreground font-semibold rounded transition-all hover:-translate-y-0.5 hover:shadow-lg font-body"
+                disabled={loading}
+                className="w-full py-3 bg-primary hover:bg-primary-dark text-primary-foreground font-semibold rounded transition-all hover:-translate-y-0.5 hover:shadow-lg font-body disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Submit Inquiry
+                {loading ? "Submitting..." : "Submit Inquiry"}
               </button>
             </form>
           </div>
