@@ -74,9 +74,9 @@ const Contact = () => {
             )}
             <form onSubmit={handleSubmit} className="space-y-4">
               {[
-                { id: "name", label: "Full Name *", type: "text" },
-                { id: "email", label: "Email Address *", type: "email" },
-                { id: "phone", label: "Phone Number *", type: "tel" },
+                { id: "name", name: "name", label: "Full Name *", type: "text" },
+                { id: "email", name: "email", label: "Email Address *", type: "email" },
+                { id: "phone", name: "phone", label: "Phone Number *", type: "tel" },
               ].map((f) => (
                 <div key={f.id}>
                   <label htmlFor={f.id} className="block mb-1.5 font-medium text-sm font-body">
@@ -84,6 +84,7 @@ const Contact = () => {
                   </label>
                   <input
                     id={f.id}
+                    name={f.name}
                     type={f.type}
                     required
                     className="w-full p-3 border border-border rounded text-foreground font-body focus:outline-none focus:border-primary transition-colors"
