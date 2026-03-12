@@ -97,14 +97,15 @@ const Contact = () => {
                 </label>
                 <select
                   id="practice"
+                  name="practice_area"
                   className="w-full p-3 border border-border rounded text-foreground font-body focus:outline-none focus:border-primary transition-colors bg-background"
                 >
                   <option value="">Select Practice Area</option>
-                  <option value="litigation">Litigation</option>
-                  <option value="arbitration">Arbitration</option>
-                  <option value="company-law">Company Law</option>
-                  <option value="civil-suits">Civil Suits</option>
-                  <option value="other">Other</option>
+                  <option value="Litigation">Litigation</option>
+                  <option value="Arbitration">Arbitration</option>
+                  <option value="Company Law">Company Law</option>
+                  <option value="Civil Suits">Civil Suits</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
               <div>
