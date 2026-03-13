@@ -27,7 +27,7 @@ const DisclaimerModal = () => {
   return (
     <Dialog open={open} onOpenChange={() => {}}>
       <DialogContent
-        className="sm:max-w-lg max-h-[90vh] overflow-y-auto [&>button]:hidden"
+        className="sm:max-w-lg max-h-[90vh] overflow-y-auto [&>button]:hidden bg-secondary border-border"
         onPointerDownOutside={(e) => e.preventDefault()}
         onEscapeKeyDown={(e) => e.preventDefault()}
         onInteractOutside={(e) => e.preventDefault()}
