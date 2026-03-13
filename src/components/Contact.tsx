@@ -1,5 +1,6 @@
 import { useState, FormEvent } from "react";
-import { MapPin, Mail, Phone, Clock } from "lucide-react";
+import { MapPin, Mail, Phone, Clock, MessageCircle } from "lucide-react";
+import { WHATSAPP_URL } from "./WhatsAppButton";
 import { toast } from "sonner";
 
 const Contact = () => {
