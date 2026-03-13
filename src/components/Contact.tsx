@@ -61,6 +61,15 @@ const Contact = () => {
                   </div>
                 </div>
               ))}
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 mt-2 px-5 py-2.5 bg-[#25D366] text-white font-semibold rounded transition-all hover:-translate-y-0.5 hover:shadow-lg font-body"
+              >
+                <MessageCircle className="w-5 h-5 fill-white stroke-white" />
+                Chat on WhatsApp
+              </a>
             </div>
           </div>
 
