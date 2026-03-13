@@ -49,15 +49,19 @@ const Contact = () => {
             <div className="space-y-5">
               {[
                 { icon: MapPin, label: "Address", value: "New Delhi, India" },
-                { icon: Phone, label: "Phone", value: "+91 9354129891" },
-                { icon: Mail, label: "Email", value: "contact@clauseworks.in" },
+                { icon: Phone, label: "Phone", value: "+91 9354129891", href: "tel:+919354129891" },
+                { icon: Mail, label: "Email", value: "contact@clauseworks.in", href: "mailto:contact@clauseworks.in" },
                 { icon: Clock, label: "Office Hours", value: "Mon–Fri: 9:30 AM – 6:00 PM\nSat: 10:00 AM – 2:00 PM" },
               ].map((c) => (
                 <div key={c.label} className="flex items-start gap-4">
                   <c.icon className="w-6 h-6 text-accent mt-0.5 shrink-0" />
                   <div>
                     <strong className="block font-body">{c.label}</strong>
-                    <span className="opacity-90 font-body whitespace-pre-line">{c.value}</span>
+                    {c.href ? (
+                      <a href={c.href} className="opacity-90 font-body whitespace-pre-line hover:text-accent transition-colors underline-offset-2 hover:underline">{c.value}</a>
+                    ) : (
+                      <span className="opacity-90 font-body whitespace-pre-line">{c.value}</span>
+                    )}
                   </div>
                 </div>
               ))}
