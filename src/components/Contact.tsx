@@ -57,7 +57,11 @@ const Contact = () => {
                   <c.icon className="w-6 h-6 text-accent mt-0.5 shrink-0" />
                   <div>
                     <strong className="block font-body">{c.label}</strong>
-                    <span className="opacity-90 font-body whitespace-pre-line">{c.value}</span>
+                    {c.href ? (
+                      <a href={c.href} className="opacity-90 font-body whitespace-pre-line hover:text-accent transition-colors underline-offset-2 hover:underline">{c.value}</a>
+                    ) : (
+                      <span className="opacity-90 font-body whitespace-pre-line">{c.value}</span>
+                    )}
                   </div>
                 </div>
               ))}

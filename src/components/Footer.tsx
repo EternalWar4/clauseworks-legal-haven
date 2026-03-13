@@ -45,8 +45,8 @@ const Footer = () => (
       <div>
         <h4 className="font-display text-accent font-semibold mb-3">Contact Info</h4>
         <p className="text-sm opacity-80 font-body mb-1.5">New Delhi, India</p>
-        <p className="text-sm opacity-80 font-body mb-1.5">+91 9354129891</p>
-        <p className="text-sm opacity-80 font-body"><p className="text-sm opacity-80 font-body">contact@clauseworks.in</p></p>
+        <a href="tel:+919354129891" className="block text-sm opacity-80 font-body mb-1.5 hover:text-accent transition-colors">+91 9354129891</a>
+        <a href="mailto:contact@clauseworks.in" className="block text-sm opacity-80 font-body hover:text-accent transition-colors">contact@clauseworks.in</a>
       </div>
     </div>
     <div className="section-container border-t border-primary-foreground/10 pt-6 text-center">
