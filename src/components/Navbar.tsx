@@ -1,12 +1,26 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import clauseworksIcon from "@/assets/clauseworks-icon.png";
 
-const navLinks = [
-  { label: "Home", target: "home" },
-  { label: "Practice Areas", target: "practice-areas" },
-  { label: "Why Choose Us", target: "why-choose" },
-  { label: "Contact", target: "contact" },
+type NavItem =
+  | { label: string; type: "scroll"; target: string }
+  | { label: string; type: "link"; to: string };
+
+const homeNavLinks: NavItem[] = [
+  { label: "Home", type: "scroll", target: "home" },
+  { label: "About Us", type: "link", to: "/about" },
+  { label: "Expertise", type: "link", to: "/expertise" },
+  { label: "Insights", type: "link", to: "/insights" },
+  { label: "Contact", type: "scroll", target: "contact" },
+];
+
+const subpageNavLinks: NavItem[] = [
+  { label: "Home", type: "link", to: "/" },
+  { label: "About Us", type: "link", to: "/about" },
+  { label: "Expertise", type: "link", to: "/expertise" },
+  { label: "Insights", type: "link", to: "/insights" },
+  { label: "Contact", type: "link", to: "/#contact" },
 ];
 
 const scrollTo = (id: string) => {
