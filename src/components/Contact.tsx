@@ -52,28 +52,26 @@ const Contact = () => {
                 { icon: Phone, label: "Phone", value: "+91 9354129891", href: "tel:+919354129891" },
                 { icon: Mail, label: "Email", value: "contact@clauseworks.in", href: "mailto:contact@clauseworks.in" },
                 { icon: Clock, label: "Office Hours", value: "Mon–Fri: 9:30 AM – 6:00 PM\nSat: 10:00 AM – 2:00 PM" },
+                { icon: MessageCircle, label: "WhatsApp", value: "Chat on WhatsApp", href: WHATSAPP_URL, external: true },
               ].map((c) => (
                 <div key={c.label} className="flex items-start gap-4">
                   <c.icon className="w-6 h-6 text-accent mt-0.5 shrink-0" />
                   <div>
                     <strong className="block font-body">{c.label}</strong>
                     {c.href ? (
-                      <a href={c.href} className="opacity-90 font-body whitespace-pre-line hover:text-accent transition-colors underline-offset-2 hover:underline">{c.value}</a>
+                      <a
+                        href={c.href}
+                        {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                        className="opacity-90 font-body whitespace-pre-line hover:text-accent transition-colors underline-offset-2 hover:underline"
+                      >
+                        {c.value}
+                      </a>
                     ) : (
                       <span className="opacity-90 font-body whitespace-pre-line">{c.value}</span>
                     )}
                   </div>
                 </div>
               ))}
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 mt-2 px-5 py-2.5 bg-[#25D366] text-white font-semibold rounded transition-all hover:-translate-y-0.5 hover:shadow-lg font-body"
-              >
-                <MessageCircle className="w-5 h-5 fill-white stroke-white" />
-                Chat on WhatsApp
-              </a>
             </div>
           </div>
 
